@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+    <!--<p id="numdot"> XYZ </p>-->
+    <input id="pointButton" type="button" value="Point"/>
+    <input id="triangleButton" type="button" value="Triangle"/>
+    <input id="circleButton" type="button" value="Circle" style="margin-right: 80px;"/>
+    <input id="undoButton" type="button" value="Undo"/>
+    <input id="redoButton" type="button" value="Redo"/>
+    <input id="clearButton" type="button" value="Clear"/>
+    <br><br>Red<input type ="range" min="0" max="100" value="100" class="slider" id="redSlider">
+    Green<input type ="range" min="0" max="100" value="100" class="slider" id="greenSlider">
+    Blue<input type ="range" min="0" max="100" value="100" class="slider" id="blueSlider">
+    <br>Size<input type ="range" min="5" max="100" value="5" class="slider" id="sizeSlider">
+    Segment Count (Circles)<input type ="range" min="10" max="40" value="10" class="slider" id="segmentSlider">
+    <br><br><input id="demoButton" type="button" value="Draw Demo"/>
+    <br><br><input id="gameButton" type="button" value="Play Snake Game"/>
+    <span id="gameScore" style="margin-left: 20px;">High Score: 000000</span>
+    <p id="constrols"> Controls: W A S D </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Snake.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
